@@ -34,6 +34,7 @@
 							<li><a href="#mac_essentials">Essentials</a></li>
 							<li><a href="#mac_screenshots">Screenshots</a></li>
 							<li><a href="#mac_chrome">Chrome on Mac</a></li>
+							<li><a href="#mac_spectacle">Spectacle for Mac</a></li>
 						</ul>
 					</li>
 					<li class="has-dropdown">
@@ -140,6 +141,29 @@
 					</tbody>
 				</table>
 
+				<a name="mac_spectacle"></a>
+				<h4>Spectacle for Mac:</h4>
+				<p><a href="http://spectacleapp.com/" target="_blank">Spectacle</a> is an amazing tool that enhances your Mac shortcuts
+				<table width="100%">
+					<thead>
+						<tr>
+							<th width="20%">Shortcut command</th>
+							<th width="80%">
+								<div class="row">
+									<div class="small-8 columns">Actions</div>
+									<div class="small-4 columns"><input ng-model="search_mac_spectacle.action" placeholder="Search an action..."></div>
+								</div>									
+							</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr ng-repeat="x in shortcuts | filter:{os:'mac'} | filter:{use:'spectacle'} | filter:search_mac_spectacle:strict">
+							<td ng-bind-html="x.cmd | unsafe "></td>
+							<td>{{ x.action }}</td>
+						</tr>
+					</tbody>
+				</table>
+
 			</div>
 		</div>
 
@@ -235,6 +259,10 @@
 		// ⌥ => &#8997;
 		// ⇧ => &#8679;
 		// ⇥ => &#8677;
+		// left arrow  => &#8592;
+		// up arrow    => &#8593;
+		// right arrow => &#8594;
+		// down arrow  => &#8595;
 
 		var app = angular.module('app', []);
 		
@@ -261,6 +289,11 @@
 				{os:"mac",use:"chrome",     cmd:"&#8984;-&#8679;-T",                action:"Opens the last closed Tab"},
 				{os:"mac",use:"chrome",     cmd:"&#8984;-R",                        action:"Reloads the page"},
 				{os:"mac",use:"chrome",     cmd:"&#8984;-&#8679;-N",                action:"Opens a new 'Incognito' window"},
+				{os:"mac",use:"spectacle",  cmd:"&#8984; &#8997; F",                action:"Sets the window in Fullscreen"},
+				{os:"mac",use:"spectacle",  cmd:"&#8984; &#8997; &#8592",           action:"Sets the window in the left half of the screen"},
+				{os:"mac",use:"spectacle",  cmd:"&#8984; &#8997; &#8594",           action:"Sets the window in the right half of the screen"},
+				{os:"mac",use:"spectacle",  cmd:"&#8984; &#8997; &#8593",           action:"Sets the window in the top half of the screen"},
+				{os:"mac",use:"spectacle",  cmd:"&#8984; &#8997; &#8595",           action:"Sets the window in the bottom half of the screen"},
 				{os:"win",use:"general",    cmd:"Ctrl-C, Ctrl-X, Ctrl-V",           action:"Copy/Cut/Paste the selected element"},
 				{os:"win",use:"general",    cmd:"Ctrl-A",                           action:"Select all the elements in the window"},
 				{os:"win",use:"general",    cmd:"Ctrl-S",                           action:"Saves the active document"},
