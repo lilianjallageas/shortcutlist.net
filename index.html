@@ -247,78 +247,9 @@
 	**************************************** -->		
 	<script src="js/vendor/jquery.js"></script>
 	<script src="js/foundation.min.js"></script>
-	<script src= "http://ajax.googleapis.com/ajax/libs/angularjs/1.2.26/angular.min.js"></script>
-	<script>
-		$(document).foundation();
-	</script>
-
-	<script>
-
-		// Unicode values:
-		// ⌘ => &#8984;
-		// ⌥ => &#8997;
-		// ⇧ => &#8679;
-		// ⇥ => &#8677;
-		// left arrow  => &#8592;
-		// up arrow    => &#8593;
-		// right arrow => &#8594;
-		// down arrow  => &#8595;
-
-		var app = angular.module('app', []);
-		
-		app.controller('shortcutsController', function($scope,$http) {
-  			$scope.shortcuts = [
-				{os:"mac",use:"general",    cmd:"&#8984;-C, &#8984;-X, &#8984;-V",  action:"Copy/Cut/Paste the selected element"},
-				{os:"mac",use:"general",    cmd:'&#8984;-A',                        action:"Select all the elements in the window"},
-				{os:"mac",use:"general",    cmd:"&#8984;-S",                        action:"Saves the active document"},
-				{os:"mac",use:"general",    cmd:"&#8984;-Z",                        action:"Undo the previous action"},
-				{os:"mac",use:"general",    cmd:"&#8984;-&#8679;-Z",                action:"Redo the previous action"},
-				{os:"mac",use:"general",    cmd:"&#8984;-F",                        action:"Find"},
-				{os:"mac",use:"general",    cmd:"&#8984;-&#8677;",                  action:"Switch to the most recent used application"},
-				{os:"mac",use:"general",    cmd:"&#8984;-H",                        action:"Hide the windows of the application currently used"},
-				{os:"mac",use:"general",    cmd:"&#8984;-M",                        action:"Minimize the window currently used"},
-				{os:"mac",use:"general",    cmd:"&#8984;-W",                        action:"Closes window currently used"},
-				{os:"mac",use:"general",    cmd:"&#8984;-Q",                        action:"Quits the application currently used"},
-				{os:"mac",use:"screenshot", cmd:"&#8984;-&#8679;-3",                action:"Takes a screenshot and saves it into a file on the desktop"},
-				{os:"mac",use:"screenshot", cmd:"&#8984;-&#8679;-4",                action:"Takes a screenshot of a selected area and saves it into a file on the desktop"},
-				{os:"mac",use:"screenshot", cmd:"&#8984;-Ctrl-&#8679;-3",           action:"Takes a screenshot and saves it in the clipboard (for magicians only)"},
-				{os:"mac",use:"screenshot", cmd:"&#8984;-Ctrl-&#8679;-4",           action:"Takes a screenshot of a selected area and saves it in the clipboard (for magicians only)"},
-				{os:"mac",use:"chrome",     cmd:"&#8984;-N",                        action:"Opens a new window"},
-				{os:"mac",use:"chrome",     cmd:"&#8984;-T",                        action:"Opens a new Tab"},
-				{os:"mac",use:"chrome",     cmd:"&#8984;-W",                        action:"Closes the active Tab"},
-				{os:"mac",use:"chrome",     cmd:"&#8984;-&#8679;-T",                action:"Opens the last closed Tab"},
-				{os:"mac",use:"chrome",     cmd:"&#8984;-R",                        action:"Reloads the page"},
-				{os:"mac",use:"chrome",     cmd:"&#8984;-&#8679;-N",                action:"Opens a new 'Incognito' window"},
-				{os:"mac",use:"spectacle",  cmd:"&#8984; &#8997; F",                action:"Sets the window in Fullscreen"},
-				{os:"mac",use:"spectacle",  cmd:"&#8984; &#8997; &#8592",           action:"Sets the window in the left half of the screen"},
-				{os:"mac",use:"spectacle",  cmd:"&#8984; &#8997; &#8594",           action:"Sets the window in the right half of the screen"},
-				{os:"mac",use:"spectacle",  cmd:"&#8984; &#8997; &#8593",           action:"Sets the window in the top half of the screen"},
-				{os:"mac",use:"spectacle",  cmd:"&#8984; &#8997; &#8595",           action:"Sets the window in the bottom half of the screen"},
-				{os:"win",use:"general",    cmd:"Ctrl-C, Ctrl-X, Ctrl-V",           action:"Copy/Cut/Paste the selected element"},
-				{os:"win",use:"general",    cmd:"Ctrl-A",                           action:"Select all the elements in the window"},
-				{os:"win",use:"general",    cmd:"Ctrl-S",                           action:"Saves the active document"},
-				{os:"win",use:"general",    cmd:"Ctrl-Z",                           action:"Undo the previous command"},
-				{os:"win",use:"general",    cmd:"Ctrl-Y",                           action:"Redo the previous command"},
-				{os:"win",use:"general",    cmd:"Ctrl-F",                           action:"Find"},
-				{os:"win",use:"general",    cmd:"Ctrl-W",                           action:"Closes the window currently used"},
-				{os:"win",use:"general",    cmd:"Alt-F4",                           action:"Quits the application currently used"},
-				{os:"win",use:"general",    cmd:"Alt-&#8677;",                      action:"Switch to the most recent used application"},
-				{os:"win",use:"general",    cmd:"Windows key + D",                  action:"Shows the desktop"},
-				{os:"win",use:"general",    cmd:"Windows key + E",                  action:"Opens Windows Explorer"},
-				{os:"win",use:"chrome",     cmd:"Ctrl-N",                           action:"Opens a new window"},
-				{os:"win",use:"chrome",     cmd:"Ctrl-T",                           action:"Opens a new Tab"},
-				{os:"win",use:"chrome",     cmd:"Ctrl-W",                           action:"Closes the active Tab"},
-				{os:"win",use:"chrome",     cmd:"Ctrl-&#8679;-T",                   action:"Opens the last closed Tab"},
-				{os:"win",use:"chrome",     cmd:"Ctrl-R",                           action:"Reloads the page"},
-				{os:"win",use:"chrome",     cmd:"Ctrl-&#8679;-N",                   action:"Opens a new 'Incognito' window"}
-			]
-		});
-		app.filter('unsafe', function($sce) {
-			return function(val) {
-				return $sce.trustAsHtml(val);
-			};
-		});
-	</script>
+	<script>$(document).foundation();</script>
+	<script src= "scripts/angular.min.js"></script>
+	<script src= "scripts/app.js"></script>
 
 </body>
 
