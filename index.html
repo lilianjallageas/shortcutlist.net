@@ -31,6 +31,7 @@
 			<section class="top-bar-section">
 				<!-- Right Nav Section -->
 				<ul class="right">
+					<li class="divider"></li>
 					<li class="has-dropdown">
 						<a href="#">Mac</a>
 						<ul class="dropdown">
@@ -40,6 +41,7 @@
 							<li><a href="#mac_spectacle" translate>{{'NAV_SPECTACLE'}}</a></li>
 						</ul>
 					</li>
+					<li class="divider"></li>
 					<li class="has-dropdown">
 						<a href="#">Windows</a>
 						<ul class="dropdown">
@@ -47,11 +49,17 @@
 							<li><a href="#win_chrome" translate>{{'NAV_CHROME_WIN'}}</a></li>
 						</ul>
 					</li>
+					<li class="divider"></li>
 					<li class="has-dropdown">
 						<a href="#" translate>{{'NAV_LANG'}}</a>
 						<ul class="dropdown">
 							<li><a ng-click="changeLanguage('en')" translate="NAV_LANG_EN"></a></li>
 							<li><a ng-click="changeLanguage('fr')" translate="NAV_LANG_FR"></a></li>
+						</ul>
+					</li>
+					<li class="divider"></li>
+					<li>
+						<div class="fb-like" data-href="https://www.facebook.com/shortcutlistnet" data-layout="button" data-action="like" data-show-faces="true" data-share="true"></div>
 					</li>
 				</ul>
 			</section>
@@ -256,6 +264,18 @@
 	<script src="js/angular-translate/angular-translate.min.js"></script>
 	<script src="js/angular-translate-loader-static-files/angular-translate-loader-static-files.min.js"></script>
 	<script src="js/app.js"></script>
+	<div id="fb-root"></div>
+	<script>
+		// Facebook Button
+		(function(d, s, id) {
+			var js, fjs = d.getElementsByTagName(s)[0];
+			if (d.getElementById(id)) return;
+			js = d.createElement(s); js.id = id;
+			js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&appId=158761927607708&version=v2.0";
+			fjs.parentNode.insertBefore(js, fjs);
+			}(document, 'script', 'facebook-jssdk')
+		);
+	</script>
 
 </body>
 
