@@ -13,7 +13,10 @@
 	<link rel="icon" type="image/png" href="img/favicon/logo_32x32.png">
 </head>
 
-<body>
+
+<!-- CONTENT OF THE APP
+**************************************** -->
+<body ng-app="app" ng-controller="shortcutsController">
 
 
 	<!-- NAV BAR
@@ -31,18 +34,24 @@
 					<li class="has-dropdown">
 						<a href="#">Mac</a>
 						<ul class="dropdown">
-							<li><a href="#mac_essentials">Essentials</a></li>
-							<li><a href="#mac_screenshots">Screenshots</a></li>
-							<li><a href="#mac_chrome">Chrome on Mac</a></li>
-							<li><a href="#mac_spectacle">Spectacle for Mac</a></li>
+							<li><a href="#mac_essentials" translate>{{'NAV_ESSENTIALS'}}</a></li>
+							<li><a href="#mac_screenshots" translate>{{'NAV_SCREENSHOTS'}}</a></li>
+							<li><a href="#mac_chrome" translate>{{'NAV_CHROME_MAC'}}</a></li>
+							<li><a href="#mac_spectacle" translate>{{'NAV_SPECTACLE'}}</a></li>
 						</ul>
 					</li>
 					<li class="has-dropdown">
 						<a href="#">Windows</a>
 						<ul class="dropdown">
-							<li><a href="#win_essentials">Essentials</a></li>
-							<li><a href="#win_chrome">Chrome on Windows</a></li>
+							<li><a href="#win_essentials" translate>{{'NAV_ESSENTIALS'}}</a></li>
+							<li><a href="#win_chrome" translate>{{'NAV_CHROME_WIN'}}</a></li>
 						</ul>
+					</li>
+					<li class="has-dropdown">
+						<a href="#" translate>{{'NAV_LANG'}}</a>
+						<ul class="dropdown">
+							<li><a ng-click="changeLanguage('en')" translate="NAV_LANG_EN"></a></li>
+							<li><a ng-click="changeLanguage('fr')" translate="NAV_LANG_FR"></a></li>
 					</li>
 				</ul>
 			</section>
@@ -54,202 +63,199 @@
 	<div class="row">
 		<div class="large-12 columns">
 			<div class="panel">
-				<h3>Welcome to ShortcutList.NET, the world's <u>shortcuts</u> reference</h3>
-				<p><b>SEARCH</b> and <b>LEARN</b> the best shortcuts and improve your productivity.</p>
+				<h3 translate>{{'HOME_WELCOME'}}</h3>
+				<p translate>{{'HOME_WEL_SUB'}}</p>
 				</div>
 			</div>
 		</div>
 	</div>
 
 
-	<!-- CONTENT OF THE APP
+	<!-- SHORTCUTS: MAC
 	**************************************** -->	
-	<div ng-app="app" ng-controller="shortcutsController">
-	
-		<!-- SHORTCUTS: MAC
-		**************************************** -->	
-		<div class="row">
-			<div class="large-12 medium-12 columns">
+	<div class="row">
+		<div class="large-12 medium-12 columns">
 
-				<h3>Mac Shortcuts</h3>			
-				<hr/><!-- divider line -->
+			<h3 translate>{{'SHORTCUTS_MAC'}}</h3>
+			<hr/><!-- divider line -->
 
-				<a name="mac_essentials"></a>
-				<h4>Essentials:</h4>
-				<table width="100%">
-					<thead>
-						<tr>
-							<th width="20%">Shortcut command</th>
-							<th width="80%">
-								<div class="row">
-									<div class="small-8 columns">Actions</div>
-									<div class="small-4 columns"><input ng-model="search_mac_essentials.action" placeholder="Search an action..."></div>
-								</div>									
-							</th>
-						</tr>
-					</thead>
-					<tbody>
-						<tr ng-repeat="x in shortcuts | filter:{os:'mac'} | filter:{use:'general'} | filter:search_mac_essentials:strict">
-							<td ng-bind-html="x.cmd | unsafe "></td>
-							<td>{{ x.action | unsafe }}</td>
-						</tr>
-					</tbody>
-				</table>
+			<a name="mac_essentials"></a>
+			<h4 translate>{{'NAV_ESSENTIALS'}}:</h4>
+			<table width="100%">
+				<thead>
+					<tr>
+						<th width="20%" translate>{{'SHORTCUTS_CMD'}}</th>
+						<th width="80%">
+							<div class="row">
+								<div class="small-8 columns" translate>{{'SHORTCUTS_ACTION'}}</div>
+								<!--div class="small-4 columns"><input ng-model="search_mac_essentials.action" placeholder="Search an action..."></div-->
+							</div>									
+						</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr ng-repeat="x in shortcuts | filter:{os:'mac'} | filter:{use:'general'} | filter:search_mac_essentials:strict">
+						<td ng-bind-html="x.cmd | unsafe "></td>
+						<td translate="{{x.action}}"></td>
+					</tr>
+				</tbody>
+			</table>
 
-				<a name="mac_screenshots"></a>
-				<h4>Screenshots:</h4>
-				<table width="100%">
-					<thead>
-						<tr>
-							<th width="20%">Shortcut command</th>
-							<th width="80%">
-								<div class="row">
-									<div class="small-8 columns">Actions</div>
-									<div class="small-4 columns"><input ng-model="search_mac_screenshots.action" placeholder="Search an action..."></div>
-								</div>									
-							</th>
-						</tr>
-					</thead>
-					<tbody>
-						<tr ng-repeat="x in shortcuts | filter:{os:'mac'} | filter:{use:'screenshot'} | filter:search_mac_screenshots:strict">
-							<td ng-bind-html="x.cmd | unsafe "></td>
-							<td>{{ x.action }}</td>
-						</tr>
-					</tbody>
-				</table>
+			<a name="mac_screenshots"></a>
+			<h4 translate>{{'NAV_SCREENSHOTS'}}:</h4>
+			<table width="100%">
+				<thead>
+					<tr>
+						<th width="20%" translate>{{'SHORTCUTS_CMD'}}</th>
+						<th width="80%">
+							<div class="row">
+								<div class="small-8 columns" translate>{{'SHORTCUTS_ACTION'}}</div>
+								<!--div class="small-4 columns"><input ng-model="search_mac_screenshots.action" placeholder="Search an action..."></div-->
+							</div>									
+						</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr ng-repeat="x in shortcuts | filter:{os:'mac'} | filter:{use:'screenshot'} | filter:search_mac_screenshots:strict">
+						<td ng-bind-html="x.cmd | unsafe "></td>
+						<td translate="{{x.action}}"></td>
+					</tr>
+				</tbody>
+			</table>
 
 
-				<a name="mac_chrome"></a>
-				<h4>Chrome on Mac:</h4>
-				<table width="100%">
-					<thead>
-						<tr>
-							<th width="20%">Shortcut command</th>
-							<th width="80%">
-								<div class="row">
-									<div class="small-8 columns">Actions</div>
-									<div class="small-4 columns"><input ng-model="search_mac_chrome.action" placeholder="Search an action..."></div>
-								</div>									
-							</th>
-						</tr>
-					</thead>
-					<tbody>
-						<tr ng-repeat="x in shortcuts | filter:{os:'mac'} | filter:{use:'chrome'} | filter:search_mac_chrome:strict">
-							<td ng-bind-html="x.cmd | unsafe "></td>
-							<td>{{ x.action }}</td>
-						</tr>
-					</tbody>
-				</table>
+			<a name="mac_chrome"></a>
+			<h4 translate>{{'NAV_CHROME_MAC'}}:</h4>
+			<table width="100%">
+				<thead>
+					<tr>
+						<th width="20%" translate>{{'SHORTCUTS_CMD'}}</th>
+						<th width="80%">
+							<div class="row">
+								<div class="small-8 columns" translate>{{'SHORTCUTS_ACTION'}}</div>
+								<!--div class="small-4 columns"><input ng-model="search_mac_chrome.action" placeholder="Search an action..."></div-->
+							</div>									
+						</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr ng-repeat="x in shortcuts | filter:{os:'mac'} | filter:{use:'chrome'} | filter:search_mac_chrome:strict">
+						<td ng-bind-html="x.cmd | unsafe "></td>
+						<td translate="{{x.action}}"></td>
+					</tr>
+				</tbody>
+			</table>
 
-				<a name="mac_spectacle"></a>
-				<h4>Spectacle for Mac:</h4>
-				<p><a href="http://spectacleapp.com/" target="_blank">Spectacle</a> is an amazing tool that enhances your Mac shortcuts
-				<table width="100%">
-					<thead>
-						<tr>
-							<th width="20%">Shortcut command</th>
-							<th width="80%">
-								<div class="row">
-									<div class="small-8 columns">Actions</div>
-									<div class="small-4 columns"><input ng-model="search_mac_spectacle.action" placeholder="Search an action..."></div>
-								</div>									
-							</th>
-						</tr>
-					</thead>
-					<tbody>
-						<tr ng-repeat="x in shortcuts | filter:{os:'mac'} | filter:{use:'spectacle'} | filter:search_mac_spectacle:strict">
-							<td ng-bind-html="x.cmd | unsafe "></td>
-							<td>{{ x.action }}</td>
-						</tr>
-					</tbody>
-				</table>
+			<a name="mac_spectacle"></a>
+			<h4 translate>{{'NAV_SPECTACLE'}}:</h4>
+			<p translate>{{'SPECTACLE_SUB'}}</p>
+			<table width="100%">
+				<thead>
+					<tr>
+						<th width="20%" translate>{{'SHORTCUTS_CMD'}}</th>
+						<th width="80%">
+							<div class="row">
+								<div class="small-8 columns" translate>{{'SHORTCUTS_ACTION'}}</div>
+								<!--div class="small-4 columns"><input ng-model="search_mac_spectacle.action" placeholder="Search an action..."></div-->
+							</div>									
+						</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr ng-repeat="x in shortcuts | filter:{os:'mac'} | filter:{use:'spectacle'} | filter:search_mac_spectacle:strict">
+						<td ng-bind-html="x.cmd | unsafe "></td>
+						<td translate="{{x.action}}"></td>
+					</tr>
+				</tbody>
+			</table>
 
-			</div>
 		</div>
-
-
-		<hr/><!-- divider line -->
-		<div class="row">
-		
-			<!-- *************** GOOGLE ADS *************** -->
-			<script async src="http://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-			<!-- ShortcutList.net -->
-			<ins class="adsbygoogle"
-			 style="display:inline-block;width:728px;height:90px"
-			 data-ad-client="ca-pub-9176408117099426"
-			 data-ad-slot="3565596275"></ins>
-			<script>
-			(adsbygoogle = window.adsbygoogle || []).push({});
-			</script>
-		
-		</div>
-		<hr/><!-- divider line -->
-
-
-		<!-- SHORTCUTS: WINDOWS
-		**************************************** -->
-		<div class="row">
-			<div class="large-12 medium-12 columns">
-
-				<h3>Windows Shortcuts</h3>			
-				<hr/><!-- divider line -->
-
-				<a name="win_essentials"></a>
-				<h4>Essentials:</h4>
-				<table width="100%">
-					<thead>
-						<tr>
-							<th width="20%">Shortcut command</th>
-							<th width="80%">
-								<div class="row">
-									<div class="small-8 columns">Actions</div>
-									<div class="small-4 columns"><input ng-model="search_win_essentials.action" placeholder="Search an action..."></div>
-								</div>									
-							</th>
-						</tr>
-					</thead>
-					<tbody>
-						<tr ng-repeat="x in shortcuts | filter:{os:'win'} | filter:{use:'general'} | filter:search_win_essentials:strict">
-							<td ng-bind-html="x.cmd | unsafe "></td>
-							<td>{{ x.action }}</td>
-						</tr>
-					</tbody>
-				</table>
-
-				<a name="win_chrome"></a>
-				<h4>Chrome on Windows:</h4>
-				<table width="100%">
-					<thead>
-						<tr>
-							<th width="20%">Shortcut command</th>
-							<th width="80%">
-								<div class="row">
-									<div class="small-8 columns">Actions</div>
-									<div class="small-4 columns"><input ng-model="search_win_chrome.action" placeholder="Search an action..."></div>
-								</div>									
-							</th>
-						</tr>
-					</thead>
-					<tbody>
-						<tr ng-repeat="x in shortcuts | filter:{os:'win'} | filter:{use:'chrome'} | filter:search_win_chrome:strict">
-							<td ng-bind-html="x.cmd | unsafe "></td>
-							<td>{{ x.action }}</td>
-						</tr>
-					</tbody>
-				</table>
-
-			</div>
-		</div>
-
 	</div>
+
+
+	<hr/><!-- divider line -->
+	<div class="row">
+	
+		<!-- *************** GOOGLE ADS *************** -->
+		<script async src="http://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+		<!-- ShortcutList.net -->
+		<ins class="adsbygoogle"
+		 style="display:inline-block;width:728px;height:90px"
+		 data-ad-client="ca-pub-9176408117099426"
+		 data-ad-slot="3565596275"></ins>
+		<script>
+		(adsbygoogle = window.adsbygoogle || []).push({});
+		</script>
+	
+	</div>
+	<hr/><!-- divider line -->
+
+
+	<!-- SHORTCUTS: WINDOWS
+	**************************************** -->
+	<div class="row">
+		<div class="large-12 medium-12 columns">
+
+			<h3 translate>{{'SHORTCUTS_WIN'}}</h3>			
+			<hr/><!-- divider line -->
+
+			<a name="win_essentials"></a>
+			<h4 translate>{{'NAV_ESSENTIALS'}}:</h4>
+			<table width="100%">
+				<thead>
+					<tr>
+						<th width="20%" translate>{{'SHORTCUTS_CMD'}}</th>
+						<th width="80%">
+							<div class="row">
+								<div class="small-8 columns" translate>{{'SHORTCUTS_ACTION'}}</div>
+								<!--div class="small-4 columns"><input ng-model="search_win_essentials.action" placeholder="Search an action..."></div-->
+							</div>									
+						</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr ng-repeat="x in shortcuts | filter:{os:'win'} | filter:{use:'general'} | filter:search_win_essentials:strict">
+						<td ng-bind-html="x.cmd | unsafe "></td>
+						<td translate="{{x.action}}"></td>
+					</tr>
+				</tbody>
+			</table>
+
+			<a name="win_chrome"></a>
+			<h4 translate>{{'NAV_CHROME_WIN'}}:</h4>
+			<table width="100%">
+				<thead>
+					<tr>
+						<th width="20%" translate>{{'SHORTCUTS_CMD'}}</th>
+						<th width="80%">
+							<div class="row">
+								<div class="small-8 columns" translate>{{'SHORTCUTS_ACTION'}}</div>
+								<!--div class="small-4 columns"><input ng-model="search_win_chrome.action" placeholder="Search an action..."></div-->
+							</div>									
+						</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr ng-repeat="x in shortcuts | filter:{os:'win'} | filter:{use:'chrome'} | filter:search_win_chrome:strict">
+						<td ng-bind-html="x.cmd | unsafe "></td>
+						<td translate="{{x.action}}"></td>
+					</tr>
+				</tbody>
+			</table>
+
+		</div>
+	</div>
+
 
 	<!-- JAVASCRIPT SCRIPTS
 	**************************************** -->		
 	<script src="js/vendor/jquery.js"></script>
 	<script src="js/foundation.min.js"></script>
 	<script>$(document).foundation();</script>
-	<script src= "scripts/angular.min.js"></script>
-	<script src= "scripts/app.js"></script>
+	<script src="js/angular.min.js"></script>
+	<script src="js/angular-translate/angular-translate.min.js"></script>
+	<script src="js/angular-translate-loader-static-files/angular-translate-loader-static-files.min.js"></script>
+	<script src="js/app.js"></script>
 
 </body>
 

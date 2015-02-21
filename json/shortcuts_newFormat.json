@@ -1,0 +1,32 @@
+{
+	"shortcuts": [ 
+			{"ID":"SHCT_CCP",             "os":"mac","use":"general",    "cmd_mac":"&#8984;-C, &#8984;-X, &#8984;-V",  "cmd_win":"Ctrl-C, Ctrl-X, Ctrl-V"},
+			{"ID":"SHCT_SEL_ALL",         "os":"mac","use":"general",    "cmd_mac":"&#8984;-A",                        "cmd_win":"Ctrl-A"},
+			{"ID":"SHCT_SAVE",            "os":"mac","use":"general",    "cmd_mac":"&#8984;-S",                        "cmd_win":"Ctrl-S"},
+			{"ID":"SHCT_UNDO",            "os":"mac","use":"general",    "cmd_mac":"&#8984;-Z",                        "cmd_win":"Ctrl-Z"},
+			{"ID":"SHCT_REDO",            "os":"mac","use":"general",    "cmd_mac":"&#8984;-&#8679;-Z",                "cmd_win":"Ctrl-Y"},
+			{"ID":"SHCT_FIND",            "os":"mac","use":"general",    "cmd_mac":"&#8984;-F",                        "cmd_win":"Ctrl-F"},
+			{"ID":"SHCT_SWITCH",          "os":"mac","use":"general",    "cmd_mac":"&#8984;-&#8677;",                  "cmd_win":"Alt-&#8677;"},
+			{"ID":"SHCT_HIDE",            "os":"mac","use":"general",    "cmd_mac":"&#8984;-H",                        "cmd_win":""},
+			{"ID":"SHCT_MINIMIZE",        "os":"mac","use":"general",    "cmd_mac":"&#8984;-M",                        "cmd_win":""},
+			{"ID":"SHCT_CLOSE_WIN",       "os":"mac","use":"general",    "cmd_mac":"&#8984;-W",                        "cmd_win":"Ctrl-W"},
+			{"ID":"SHCT_QUIT",            "os":"mac","use":"general",    "cmd_mac":"&#8984;-Q",                        "cmd_win":"Alt-F4"},
+			{"ID":"SHCT_SCR_SHOT1",       "os":"mac","use":"screenshot", "cmd_mac":"&#8984;-&#8679;-3",                "cmd_win":"Print Screen key"},
+			{"ID":"SHCT_SCR_SHOT2",       "os":"mac","use":"screenshot", "cmd_mac":"&#8984;-&#8679;-4",                "cmd_win":""},
+			{"ID":"SHCT_SCR_SHOT3",       "os":"mac","use":"screenshot", "cmd_mac":"&#8984;-Ctrl-&#8679;-3",           "cmd_win":""},
+			{"ID":"SHCT_SCR_SHOT4",       "os":"mac","use":"screenshot", "cmd_mac":"&#8984;-Ctrl-&#8679;-4",           "cmd_win":""},
+			{"ID":"SHCT_NEW_WIN",         "os":"mac","use":"chrome",     "cmd_mac":"&#8984;-N",                        "cmd_win":"Ctrl-N"},
+			{"ID":"SHCT_NEW_TAB",         "os":"mac","use":"chrome",     "cmd_mac":"&#8984;-T",                        "cmd_win":"Ctrl-T"},
+			{"ID":"SHCT_CLOSE_TAB",       "os":"mac","use":"chrome",     "cmd_mac":"&#8984;-W",                        "cmd_win":"Ctrl-W"},
+			{"ID":"SHCT_LAST_TAB",        "os":"mac","use":"chrome",     "cmd_mac":"&#8984;-&#8679;-T",                "cmd_win":"Ctrl-&#8679;-T"},
+			{"ID":"SHCT_RELOAD",          "os":"mac","use":"chrome",     "cmd_mac":"&#8984;-R",                        "cmd_win":"Ctrl-R"},
+			{"ID":"SHCT_NEW_PRIV_WIN",    "os":"mac","use":"chrome",     "cmd_mac":"&#8984;-&#8679;-N",                "cmd_win":"Ctrl-&#8679;-N"},
+			{"ID":"SHCT_FULL_SCR",        "os":"mac","use":"spectacle",  "cmd_mac":"&#8984; &#8997; F",                "cmd_win":""},
+			{"ID":"SHCT_LEFT",            "os":"mac","use":"spectacle",  "cmd_mac":"&#8984; &#8997; &#8592",           "cmd_win":""},
+			{"ID":"SHCT_RIGHT",           "os":"mac","use":"spectacle",  "cmd_mac":"&#8984; &#8997; &#8594",           "cmd_win":""},
+			{"ID":"SHCT_TOP",             "os":"mac","use":"spectacle",  "cmd_mac":"&#8984; &#8997; &#8593",           "cmd_win":""},
+			{"ID":"SHCT_BOTTOM",          "os":"mac","use":"spectacle",  "cmd_mac":"&#8984; &#8997; &#8595",           "cmd_win":""},
+			{"ID":"SHCT_SHOW_DESK",       "os":"win","use":"general",    "cmd_mac":"",                                 "cmd_win":"Windows key + D"},
+			{"ID":"SHCT_OPEN_EXPL",       "os":"win","use":"general",    "cmd_mac":"",                                 "cmd_win":"Windows key + E"}
+	]
+}
