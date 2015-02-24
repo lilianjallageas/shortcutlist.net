@@ -9,6 +9,7 @@
 	"NAV_CHROME_MAC"       :"Chrome sur Mac",
 	"NAV_CHROME_WIN"       :"Chrome sur Windows",
 	"NAV_SPECTACLE"        :"Spectacle pour Mac",
+	"NAV_SUBLIME"          :"Sublime Text",
 	"SPECTACLE_SUB"        :"<a href='http://spectacleapp.com/' target='_blank'>Spectacle</a> est un formidable outils qui améliore vos raccourcis Mac",
 	"SHORTCUTS_MAC"        :"Raccourcis Mac",
 	"SHORTCUTS_WIN"        :"Raccourcis Windows",
@@ -41,5 +42,13 @@
 	"SHCT_SCR_TOP"         :"Met la fenêtre sur la moitié supérieure de l'écran",
 	"SHCT_SCR_BOTTOM"      :"Met la fenêtre sur la moitié inférieure de l'écran",
 	"SHCT_SHOW_DESK"       :"Affiche le bureau",
-	"SHCT_OPEN_EXPL"       :"Ouvre la fenêtre d'exploration"
+	"SHCT_OPEN_EXPL"       :"Ouvre la fenêtre d'exploration",
+	"SUBL_NEW"             :"Nouveau Fichier",
+	"SUBL_OPEN"            :"Ouvre un fichier",
+	"SUBL_FIND"            :"Recherche de texte dans le fichier actif",
+	"SUBL_FIND_IN_FILES"   :"Recherche de texte dans plusieurs fichiers à la fois",
+	"SUBL_DUPL_LINE"       :"Duplique la ligne où se trouve le curseur",
+	"SUBL_MOVE_LINE"       :"Déplace la ligne vers le haut/bas",
+	"SUBL_MULTI_LINE"      :"Selectionnez plusieurs lignes, effectuez le raccourcis clavier, puis vous pouvez effectuer les mêmes actions sur plusieurs lignes en même temps",
+	"SUBL_COMMENT"         :"Commente les lignes sélectionnées"
 }

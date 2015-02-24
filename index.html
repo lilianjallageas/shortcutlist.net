@@ -39,6 +39,7 @@
 							<li><a href="#mac_screenshots" translate>{{'NAV_SCREENSHOTS'}}</a></li>
 							<li><a href="#mac_chrome" translate>{{'NAV_CHROME_MAC'}}</a></li>
 							<li><a href="#mac_spectacle" translate>{{'NAV_SPECTACLE'}}</a></li>
+							<li><a href="#mac_sublime" translate>{{'NAV_SUBLIME'}}</a></li>
 						</ul>
 					</li>
 					<li class="divider"></li>
@@ -162,6 +163,28 @@
 				</thead>
 				<tbody>
 					<tr ng-repeat="x in shortcuts | filter:{os:'mac'} | filter:{use:'spectacle'} | filter:search_mac_spectacle:strict">
+						<td ng-bind-html="x.cmd | unsafe "></td>
+						<td translate="{{x.action}}"></td>
+					</tr>
+				</tbody>
+			</table>
+
+			<a name="mac_sublime"></a>
+			<h4 translate>{{'NAV_SUBLIME'}}:</h4>
+			<table width="100%">
+				<thead>
+					<tr>
+						<th width="20%" translate>{{'SHORTCUTS_CMD'}}</th>
+						<th width="80%">
+							<div class="row">
+								<div class="small-8 columns" translate>{{'SHORTCUTS_ACTION'}}</div>
+								<!--div class="small-4 columns"><input ng-model="search_mac_sublime.action" placeholder="Search an action..."></div-->
+							</div>									
+						</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr ng-repeat="x in shortcuts | filter:{os:'mac'} | filter:{use:'sublime'} | filter:search_mac_sublime:strict">
 						<td ng-bind-html="x.cmd | unsafe "></td>
 						<td translate="{{x.action}}"></td>
 					</tr>

@@ -11,21 +11,36 @@
 			{"os":"mac","use":"general",    "cmd":"&#8984;-M",                        "action":"SHCT_MINIMIZE"},
 			{"os":"mac","use":"general",    "cmd":"&#8984;-W",                        "action":"SHCT_CLOSE_WIN"},
 			{"os":"mac","use":"general",    "cmd":"&#8984;-Q",                        "action":"SHCT_CLOSE_APP"},
+
 			{"os":"mac","use":"screenshot", "cmd":"&#8984;-&#8679;-3",                "action":"SHCT_SCR_SHOT1"},
 			{"os":"mac","use":"screenshot", "cmd":"&#8984;-&#8679;-4",                "action":"SHCT_SCR_SHOT2"},
 			{"os":"mac","use":"screenshot", "cmd":"&#8984;-Ctrl-&#8679;-3",           "action":"SHCT_SCR_SHOT3"},
 			{"os":"mac","use":"screenshot", "cmd":"&#8984;-Ctrl-&#8679;-4",           "action":"SHCT_SCR_SHOT4"},
+
 			{"os":"mac","use":"chrome",     "cmd":"&#8984;-N",                        "action":"SHCT_NEW_WIN"},
 			{"os":"mac","use":"chrome",     "cmd":"&#8984;-T",                        "action":"SHCT_NEW_TAB"},
 			{"os":"mac","use":"chrome",     "cmd":"&#8984;-W",                        "action":"SHCT_CLOSE_TAB"},
 			{"os":"mac","use":"chrome",     "cmd":"&#8984;-&#8679;-T",                "action":"SHCT_LAST_TAB"},
 			{"os":"mac","use":"chrome",     "cmd":"&#8984;-R",                        "action":"SHCT_RELOAD"},
 			{"os":"mac","use":"chrome",     "cmd":"&#8984;-&#8679;-N",                "action":"SHCT_NEW_PRIV_WIN"},
+
 			{"os":"mac","use":"spectacle",  "cmd":"&#8984; &#8997; F",                "action":"SHCT_SCR_FULL"},
 			{"os":"mac","use":"spectacle",  "cmd":"&#8984; &#8997; &#8592",           "action":"SHCT_SCR_LEFT"},
 			{"os":"mac","use":"spectacle",  "cmd":"&#8984; &#8997; &#8594",           "action":"SHCT_SCR_RIGHT"},
 			{"os":"mac","use":"spectacle",  "cmd":"&#8984; &#8997; &#8593",           "action":"SHCT_SCR_TOP"},
 			{"os":"mac","use":"spectacle",  "cmd":"&#8984; &#8997; &#8595",           "action":"SHCT_SCR_BOTTOM"},
+
+			{"os":"mac","use":"sublime",    "cmd":"&#8984;-N",                        "action":"SUBL_NEW"},
+			{"os":"mac","use":"sublime",    "cmd":"&#8984;-O",                        "action":"SUBL_OPEN"},
+			{"os":"mac","use":"sublime",    "cmd":"&#8984;-F",                        "action":"SUBL_FIND"},
+			{"os":"mac","use":"sublime",    "cmd":"&#8984;-&#8679;-F ",               "action":"SUBL_FIND_IN_FILES"},
+			{"os":"mac","use":"sublime",    "cmd":"&#8984;-&#8679;-D ",               "action":"SUBL_DUPL_LINE"},
+			{"os":"mac","use":"sublime",    "cmd":"&#8984;-Ctrl-&#8593; &#8595; ",    "action":"SUBL_MOVE_LINE"},
+			{"os":"mac","use":"sublime",    "cmd":"&#8984;-&#8679;-L",                "action":"SUBL_MULTI_LINE"},
+			{"os":"mac","use":"sublime",    "cmd":"&#8984;-&#8679;-/",                "action":"SUBL_COMMENT"},
+
+
+
 			{"os":"win","use":"general",    "cmd":"Ctrl-C, Ctrl-X, Ctrl-V",           "action":"SHCT_CCP"},
 			{"os":"win","use":"general",    "cmd":"Ctrl-A",                           "action":"SHCT_SEL_ALL"},
 			{"os":"win","use":"general",    "cmd":"Ctrl-S",                           "action":"SHCT_SAVE"},
@@ -37,6 +52,7 @@
 			{"os":"win","use":"general",    "cmd":"Alt-&#8677;",                      "action":"SHCT_SWITCH"},
 			{"os":"win","use":"general",    "cmd":"Windows key + D",                  "action":"SHCT_SHOW_DESK"},
 			{"os":"win","use":"general",    "cmd":"Windows key + E",                  "action":"SHCT_OPEN_EXPL"},
+
 			{"os":"win","use":"chrome",     "cmd":"Ctrl-N",                           "action":"SHCT_NEW_WIN"},
 			{"os":"win","use":"chrome",     "cmd":"Ctrl-T",                           "action":"SHCT_NEW_TAB"},
 			{"os":"win","use":"chrome",     "cmd":"Ctrl-W",                           "action":"SHCT_CLOSE_TAB"},
