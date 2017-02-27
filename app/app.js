@@ -28,7 +28,7 @@ var app = angular.module('app', ['ngRoute','pascalprecht.translate']);
 app.controller('shortcutsController', function($scope,$http,$translate) {
 
 	// Loading the shortcuts from the JSON file
-	$http.get("json/shortcuts.json").success(function(data) {
+	$http.get("app/json/shortcuts.json").success(function(data) {
 		$scope.shortcuts = data.shortcuts;
 	});
 
@@ -38,6 +38,7 @@ app.controller('shortcutsController', function($scope,$http,$translate) {
 	};
 });
 
+
 /**
  * Routes
  * ============================
@@ -46,7 +47,7 @@ app.config(function($routeProvider) {
 	$routeProvider
 	// route for the home page
 	.when('/', {
-		templateUrl : 'js/shortcuts.html',
+		templateUrl : 'app/shortcuts.html',
 		controller  : 'shortcutsController'
 	})
 });
@@ -71,7 +72,7 @@ app.filter('unsafe', function($sce) {
  */
 app.config(['$translateProvider', function ($translateProvider) {
 	$translateProvider.useStaticFilesLoader({
-		prefix: 'json/lang/locale-',
+		prefix: 'app/json/lang/locale-',
 		suffix: '.json'
 	});
 	$translateProvider.preferredLanguage('en');
