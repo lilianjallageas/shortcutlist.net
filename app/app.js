@@ -47,9 +47,32 @@ app.config(function($routeProvider) {
 	$routeProvider
 	// route for the home page
 	.when('/', {
-		templateUrl : 'app/shortcuts.html',
+		templateUrl : 'app/templates/shortcuts.tpl.html',
 		controller  : 'shortcutsController'
 	})
+});
+
+
+/**
+ * Directives
+ * ============================
+ */
+app.directive('shortcutArray', function() {
+	return {
+		restrict: "E",
+		replace: true,
+		templateUrl: 'app/templates/shortcut-array.tpl.html',
+		scope: {
+			shortcuts:  "=shortcuts",
+			title:      "@title",
+			os:         "@os",
+			use:        "@use"
+		},
+		link: function (scope, element, attrs) {
+			console.log(scope.os);
+			console.log(scope.use);
+		}
+	};
 });
 
 
