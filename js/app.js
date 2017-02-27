@@ -18,7 +18,7 @@
  * App Module 
  * ============================
  */
-var app = angular.module('app', ['pascalprecht.translate']);
+var app = angular.module('app', ['ngRoute','pascalprecht.translate']);
 
 
 /**
@@ -29,13 +29,26 @@ app.controller('shortcutsController', function($scope,$http,$translate) {
 
 	// Loading the shortcuts from the JSON file
 	$http.get("json/shortcuts.json").success(function(data) {
-		$scope.shortcuts = data.shortcuts
+		$scope.shortcuts = data.shortcuts;
 	});
 
 	// Function that enables the change of language
 	$scope.changeLanguage = function (langKey) {
 		$translate.use(langKey);
 	};
+});
+
+/**
+ * Routes
+ * ============================
+ */
+app.config(function($routeProvider) {
+	$routeProvider
+	// route for the home page
+	.when('/', {
+		templateUrl : 'js/shortcuts.html',
+		controller  : 'shortcutsController'
+	})
 });
 
 
