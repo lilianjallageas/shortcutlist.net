@@ -11,8 +11,10 @@
 	<meta property="og:site_name" content="ShortcutList Net">
 	<meta property="og:title" content="ShortcutList.Net: Know your Shortcuts and save time for your life">
 	<meta property="og:description" content="SEARCH and LEARN the best shortcuts and improve your productivity !!!">
-	<link rel="stylesheet" href="style/css/foundation.min.css" />
 	<link rel="icon" type="image/png" href="style/img/favicon/logo_32x32.png">
+	<!-- CSS -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+	<link rel="stylesheet" type="text/css" href="style/css/app.css">
 </head>
 
 
@@ -20,17 +22,17 @@
 
 	<!-- CONTENT OF THE APP
 	**************************************** -->
-	<div ng-view></div>
+	<div class="col-lg-8 col-lg-offset-2" ng-view></div>
 
 
 	<!-- JAVASCRIPT IMPORTS
 	**************************************** -->		
-	<script src="vendors/modernizr.js"></script>
+	<!-- JQuery -->
 	<script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
- 	<script src="vendors/foundation.min.js"></script>
-	<script>$(document).foundation();</script>
 	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.5/angular.min.js"></script>
 	<script src="//ajax.googleapis.com/ajax/libs/angularjs/1.4.5/angular-route.js"></script>
+	<!-- Bootstrap -->
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 	<script src="vendors/angular-translate/angular-translate.min.js"></script>
 	<script src="vendors/angular-translate-loader-static-files/angular-translate-loader-static-files.min.js"></script>
 	<!-- AngularJs Application -->
@@ -47,6 +49,17 @@
 			fjs.parentNode.insertBefore(js, fjs);
 			}(document, 'script', 'facebook-jssdk')
 		);
+	</script>
+
+	<!-- Collapse of nav-bar -->
+	<script>
+		var collapseNavBar = function(){
+			// check if window is small enough so dropdown is created
+			var toggle = $(".navbar-toggle").is(":visible");
+			if (toggle) {
+				$(".navbar-collapse").collapse('hide');
+			}
+		};
 	</script>
 
 </body>

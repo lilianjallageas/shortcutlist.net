@@ -1,20 +1,18 @@
-<div>
-	<h4 translate>{{title}}:</h4>
-	<table width="100%">
-		<thead>
-			<tr>
-				<th width="20%" translate>{{'SHORTCUTS_CMD'}}</th>
-				<th width="80%">
-					<div class="row">
-						<div class="small-8 columns" translate>{{'SHORTCUTS_ACTION'}}</div>
-					</div>									
-				</th>
+<div class="panel panel-default">
+	<div class="panel-heading">
+		<h3 class="panel-title" translate>{{title}}:</h3>
+	</div>
+	<table class="table table-bordered table-condensed table-hover">
+		<!--thead>
+			<tr class="active">
+				<td translate width="20%">{{'SHORTCUTS_CMD'}}</td>
+				<td translate width="80%">{{'SHORTCUTS_ACTION'}}</td>
 			</tr>
-		</thead>
+		</thead-->
 		<tbody>
 			<tr ng-repeat="x in shortcuts | filter:{os:os} | filter:{use:use}">
-				<td ng-bind-html="x.cmd | unsafe "></td>
-				<td translate="{{x.action}}"></td>
+				<td ng-bind-html="x.cmd | unsafe " width="20%"></td>
+				<td translate="{{x.action}}" width="80%"></td>
 			</tr>
 		</tbody>
 	</table>

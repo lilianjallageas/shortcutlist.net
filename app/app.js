@@ -25,7 +25,7 @@ var app = angular.module('app', ['ngRoute','pascalprecht.translate']);
  * Controller
  * ============================
  */
-app.controller('shortcutsController', function($scope,$http,$translate) {
+app.controller('shortcutsController', function($scope,$http,$location,$anchorScroll,$translate) {
 
 	// Loading the shortcuts from the JSON file
 	$http.get("app/json/shortcuts.json").success(function(data) {
@@ -33,9 +33,17 @@ app.controller('shortcutsController', function($scope,$http,$translate) {
 	});
 
 	// Function that enables the change of language
-	$scope.changeLanguage = function (langKey) {
+	$scope.changeLanguage = function(langKey) {
 		$translate.use(langKey);
 	};
+
+	// Function that allows the navigation to anchors in the page
+	$scope.gotoAnchor = function(anchor) {
+		$location.hash(anchor);
+		$anchorScroll.yOffset = 65; // offset for the nav-bar
+		$anchorScroll();
+	};
+
 });
 
 
@@ -68,10 +76,7 @@ app.directive('shortcutArray', function() {
 			os:         "@os",
 			use:        "@use"
 		},
-		link: function (scope, element, attrs) {
-			console.log(scope.os);
-			console.log(scope.use);
-		}
+		link: function (scope, element, attrs) {}
 	};
 });
 

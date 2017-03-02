@@ -1,61 +1,60 @@
 <!-- NAV BAR
 **************************************** -->
-<div class="contain-to-grid">
-	<nav class="top-bar" data-topbar role="navigation">
-		<ul class="title-area">
-			<li class="name">
-				<h1><a href="#">Shortcut List</a></h1>
-			</li>
-		</ul>
-		<section class="top-bar-section">
-			<!-- Right Nav Section -->
-			<ul class="right">
-				<li class="divider"></li>
-				<li class="has-dropdown">
-					<a>Mac</a>
-					<ul class="dropdown">
-						<li><a href="#mac_essentials" translate>{{'NAV_ESSENTIALS'}}</a></li>
-						<li><a href="#mac_screenshots" translate>{{'NAV_SCREENSHOTS'}}</a></li>
-						<li><a href="#mac_chrome" translate>{{'NAV_CHROME_MAC'}}</a></li>
-						<li><a href="#mac_spectacle" translate>{{'NAV_SPECTACLE'}}</a></li>
-						<li><a href="#mac_sublime" translate>{{'NAV_SUBLIME'}}</a></li>
+<div class="navbar navbar-default navbar-fixed-top navbar-inverse" role="navigation">
+	<div class="col-lg-8 col-lg-offset-2">
+		<div class="navbar-header">
+			<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+				<span class="sr-only">Toggle navigation</span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+			</button>
+			<a class="navbar-brand" href="#/">
+				Shortcut List
+			</a>
+		</div>
+		<div id="navbar" class="navbar-collapse collapse">
+			<ul class="nav navbar-nav navbar-right">
+				<li class="dropdown">
+					<a class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Mac <span class="caret"></span></a>
+					<ul class="dropdown-menu">
+						<li><a ng-click="collapseNavBar();gotoAnchor('mac_essentials');" translate>{{'NAV_ESSENTIALS'}}</a></li>
+						<li><a ng-click="collapseNavBar();gotoAnchor('mac_screenshots');" translate>{{'NAV_SCREENSHOTS'}}</a></li>
+						<li><a ng-click="collapseNavBar();gotoAnchor('mac_chrome');" translate>{{'NAV_CHROME_MAC'}}</a></li>
+						<li><a ng-click="collapseNavBar();gotoAnchor('mac_spectacle');" translate>{{'NAV_SPECTACLE'}}</a></li>
+						<li><a ng-click="collapseNavBar();gotoAnchor('mac_sublime');" translate>{{'NAV_SUBLIME'}}</a></li>
 					</ul>
 				</li>
-				<li class="divider"></li>
-				<li class="has-dropdown">
-					<a href="#">Windows</a>
-					<ul class="dropdown">
-						<li><a href="#win_essentials" translate>{{'NAV_ESSENTIALS'}}</a></li>
-						<li><a href="#win_chrome" translate>{{'NAV_CHROME_WIN'}}</a></li>
+				<li class="dropdown">
+					<a class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Windows <span class="caret"></span></a>
+					<ul class="dropdown-menu">
+						<li><a ng-click="collapseNavBar();gotoAnchor('win_essentials');" translate>{{'NAV_ESSENTIALS'}}</a></li>
+						<li><a ng-click="collapseNavBar();gotoAnchor('win_chrome');" translate>{{'NAV_CHROME_WIN'}}</a></li>
 					</ul>
 				</li>
-				<li class="divider"></li>		
 				<li><a ng-click="changeLanguage('en')"><img src="/style/img/lang/en.png"></a></li>
 				<li><a ng-click="changeLanguage('fr')"><img src="/style/img/lang/fr.png"></a></li>
-				<li class="divider"></li>	
-				<li><a href="https://www.youtube.com/c/ShortcutlistNet" target="_blank"><img src="/style/img/YouTube-logo_40px.png"></a></li>
 			</ul>
-		</section>
-	</nav>
-</div>
-
-<!-- WELCOME SECTION
-**************************************** -->			
-<div class="row">
-	<div class="large-12 columns">
-		<div class="panel">
-			<h3 translate>{{'HOME_WELCOME'}}</h3>
-			<p translate>{{'HOME_WEL_SUB'}}</p>
-			<div class="fb-like" data-href="https://www.facebook.com/shortcutlistnet" data-layout="button" data-action="like" data-show-faces="true" data-share="true"></div>
 		</div>
 	</div>
 </div>
 
 
+<!-- WELCOME SECTION
+**************************************** -->
+<div class="row">
+	<div class="panel">
+		<h3 translate>{{'HOME_WELCOME'}}</h3>
+		<p translate>{{'HOME_WEL_SUB'}}</p>
+		<div class="fb-like" data-href="https://www.facebook.com/shortcutlistnet" data-layout="button" data-action="like" data-show-faces="true" data-share="true"></div>
+	</div>
+</div>
+
+
+<!-- GOOGLE ADS
+**************************************** -->
 <hr/>
 <div class="row">
-
-	<!-- *************** GOOGLE ADS *************** -->
 	<script async src="http://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
 	<!-- ShortcutList.net -->
 	<ins class="adsbygoogle"
@@ -71,39 +70,32 @@
 
 
 <!-- SHORTCUTS: MAC
-**************************************** -->	
+**************************************** -->
 <div class="row">
-	<div class="large-12 medium-12 columns">
+	<h3 translate>{{'SHORTCUTS_MAC'}}</h3>
+	<hr/>
 
-		<h3 translate>{{'SHORTCUTS_MAC'}}</h3>
-		<hr/>
+	<a name="mac_essentials"></a>
+	<shortcut-array shortcuts="shortcuts" title="NAV_ESSENTIALS" os="mac" use="general"></shortcut-array>
 
-		<a name="mac_essentials"></a>
-		<shortcut-array shortcuts="shortcuts" title="NAV_ESSENTIALS" os="mac" use="general"></shortcut-array>
+	<a name="mac_screenshots"></a>
+	<shortcut-array shortcuts="shortcuts" title="NAV_SCREENSHOTS" os="mac" use="screenshot"></shortcut-array>
 
+	<a name="mac_chrome"></a>
+	<shortcut-array shortcuts="shortcuts" title="NAV_CHROME_MAC" os="mac" use="chrome"></shortcut-array>
 
-		<a name="mac_screenshots"></a>
-		<shortcut-array shortcuts="shortcuts" title="NAV_SCREENSHOTS" os="mac" use="screenshot"></shortcut-array>
+	<a name="mac_spectacle"></a>
+	<shortcut-array shortcuts="shortcuts" title="NAV_SPECTACLE" os="mac" use="spectacle"></shortcut-array>
 
-
-		<a name="mac_chrome"></a>
-		<shortcut-array shortcuts="shortcuts" title="NAV_CHROME_MAC" os="mac" use="chrome"></shortcut-array>
-
-		<a name="mac_spectacle"></a>
-		<shortcut-array shortcuts="shortcuts" title="NAV_SPECTACLE" os="mac" use="spectacle"></shortcut-array>
-
-
-		<a name="mac_sublime"></a>
-		<shortcut-array shortcuts="shortcuts" title="NAV_SUBLIME" os="mac" use="sublime"></shortcut-array>
-
-	</div>
+	<a name="mac_sublime"></a>
+	<shortcut-array shortcuts="shortcuts" title="NAV_SUBLIME" os="mac" use="sublime"></shortcut-array>
 </div>
 
 
+<!-- GOOGLE ADS
+**************************************** -->
 <hr/>
 <div class="row">
-
-	<!-- *************** GOOGLE ADS *************** -->
 	<script async src="http://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
 	<!-- ShortcutList.net -->
 	<ins class="adsbygoogle"
@@ -121,17 +113,12 @@
 <!-- SHORTCUTS: WINDOWS
 **************************************** -->
 <div class="row">
-	<div class="large-12 medium-12 columns">
+	<h3 translate>{{'SHORTCUTS_WIN'}}</h3>
+	<hr/>
 
-		<h3 translate>{{'SHORTCUTS_WIN'}}</h3>			
-		<hr/>
+	<a name="win_essentials"></a>
+	<shortcut-array shortcuts="shortcuts" title="NAV_ESSENTIALS" os="win" use="general"></shortcut-array>
 
-		<a name="win_essentials"></a>
-		<shortcut-array shortcuts="shortcuts" title="NAV_ESSENTIALS" os="win" use="general"></shortcut-array>
-
-
-		<a name="win_chrome"></a>
-		<shortcut-array shortcuts="shortcuts" title="NAV_CHROME_WIN" os="win" use="chrome"></shortcut-array>
-
-	</div>
+	<a name="win_chrome"></a>
+	<shortcut-array shortcuts="shortcuts" title="NAV_CHROME_WIN" os="win" use="chrome"></shortcut-array>
 </div>
