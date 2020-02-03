@@ -1,4 +1,4 @@
 # shortcutlist.net
 Keyboard Shortcuts Essentials
 
-See the website here: http://shortcutlist.net
+See the website here: https://lilianjallageas.github.io/shortcutlist.net
